@@ -94,7 +94,7 @@ instance_groups:
         receivers:
         - name: default-receiver
           slack_configs:
-          - api_url: https://mattermost.cvshealth.com/hooks/x3ihgaz1d7feuyrxx897baemcw....
+          - api_url: https://mattermost.cvshealth.com/hooks/aujstg8ju3nuxe46gcq54knwse
             channel: 'cloud-foundry-notices'
             send_resolved: true
             pretext: "text before the actual alert message"
