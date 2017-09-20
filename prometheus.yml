@@ -91,7 +91,14 @@ instance_groups:
     release: prometheus
     properties:
       alertmanager:
-        receivers: ((alertmanager.receivers))
+        receivers:
+        - name: default-receiver
+          slack_configs:
+          - api_url: https://mattermost.cvshealth.com/hooks/x3ihgaz1d7feuyrxx897baemcw....
+            channel: 'cloud-foundry-notices'
+            send_resolved: true
+            pretext: "text before the actual alert message"
+            text: "{{ .CommonAnnotations.description }}"
         route:
           receiver: default-receiver
   env:
