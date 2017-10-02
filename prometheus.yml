@@ -97,7 +97,7 @@ instance_groups:
           - api_url: https://mattermost.cvshealth.com/hooks/aujstg8ju3nuxe46gcq54knwse
             channel: 'cloud-foundry-notices'
             send_resolved: true
-            pretext: "New alert from Prometheus!"
+            pretext: "New alert from Prometheus West!"
             text: "{{ .CommonAnnotations.description }}"
         route:
           receiver: default-receiver
